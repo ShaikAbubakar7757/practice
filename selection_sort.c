@@ -1,3 +1,7 @@
+/**
+* Designed by Shaik Abubakar
+* for any queries please ping me abubakarshaik8341@gmail.com
+*/
 #include <stdio.h>
 
 /*swaping*/
