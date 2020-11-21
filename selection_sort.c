@@ -56,7 +56,7 @@ int* selection_sort(int a[], int N)
 }
 void print_array(int *a, int *N)
 {
-     for(int i = 0 ; i<((*N)-1) ; i++)
+     for(int i = 0 ; i<=((*N)-1) ; i++)
     {
         printf("%d ",a[i]);
     }
