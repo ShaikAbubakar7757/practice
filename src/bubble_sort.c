@@ -5,7 +5,7 @@
 */
 
 #include <stdio.h>
-#include "myheader.h"
+#include "my_header.h"
 
 
 int* bubble_sort(int a[], int *N)

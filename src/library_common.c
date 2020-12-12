@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include "myheader.h"
+#include "my_header.h"
 
 void print_array(int *a, int *N)
 {
