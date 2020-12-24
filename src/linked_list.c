@@ -1,11 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
-
-typedef struct node
-{
-    int val;
-    struct node *next;
-}node_t;
+#include "my_header.h"
 
 void print_list(node_t *head)
 {

@@ -13,7 +13,7 @@ CFLAGS = -Wall --std=gnu99 -g -c
 
 all : $(MAIN)
 
-$(MAIN) : $(BINDIR)/$(MAIN).o $(OBJS) 
+$(MAIN) :  $(OBJS) $(BINDIR)/$(MAIN).o 
 	@echo "$(RED_CLR) Linking all objects...$(NO_CLR)"
 	$(CC) -o $@ $^  
 
