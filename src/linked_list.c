@@ -41,6 +41,19 @@ void insert_at_end(node_t **head, int val)
     }
     temp->next = tmp;
 }
+
+void insert_at(node_t **head, int index, int val)
+{
+    node_t *temp = *head;
+    for(int i = 1;i<index - 1 ;i++)
+    {
+        temp = temp->next;
+    }
+    node_t *tmp = create_node(val);
+    tmp->next = temp->next;
+    temp->next = tmp;
+    
+}
 int main() {
     printf("Hello, world!\n");
     node_t *head = NULL;
@@ -51,6 +64,11 @@ int main() {
    
     print_list(head);
     insert_at_end(&head, 600);
+    print_list(head);
+    insert_at(&head, 2, 346);
+    print_list(head);
+    insert_at(&head, 4, 4364);
+    insert_at(&head, 5, 53454);
     print_list(head);
     return 0;
 }
