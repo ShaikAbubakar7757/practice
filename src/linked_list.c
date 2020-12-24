@@ -61,22 +61,5 @@ void insert_at(node_t **head, int index, int val)
     temp->next = tmp;
     
 }
-int main() {
-    printf("Hello, world!\n");
-    node_t *head = NULL;
-    insert_at_begin(&head, 200);
-    insert_at_begin(&head, 300);
-    insert_at_begin(&head, 400);
-    insert_at_begin(&head, 500);
-   
-    print_list(head);
-    insert_at_end(&head, 600);
-    print_list(head);
-    insert_at(&head, 2, 346);
-    print_list(head);
-    insert_at(&head, 4, 4364);
-    insert_at(&head, 5, 53454);
-    print_list(head);
-    return 0;
-}
+
   

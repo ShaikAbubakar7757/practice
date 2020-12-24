@@ -20,5 +20,20 @@ main (int argc, char *argv[])
     bubble_sort(a1, &N);
     printf("Array after sorting \n");
     print_array(a1, &N);
+
+    node_t *head = NULL;
+    insert_at_begin(&head, 200);
+    insert_at_begin(&head, 300);
+    insert_at_begin(&head, 400);
+    insert_at_begin(&head, 500);
+   
+    print_list(head);
+    insert_at_end(&head, 600);
+    print_list(head);
+    insert_at(&head, 2, 346);
+    print_list(head);
+    insert_at(&head, 4, 4364);
+    insert_at(&head, 5, 53454);
+    print_list(head);
     return 0;
 }
