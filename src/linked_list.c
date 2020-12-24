@@ -10,12 +10,12 @@ typedef struct node
 void print_list(node_t *head)
 {
     node_t *temp = head;
-    while(temp != NULL)
+    while(temp->next != NULL)
     {
         printf("%d -> ",temp->val);
         temp = temp->next;
     }
-    printf("\n");
+    printf("NULL\n");
 }
 
 node_t* create_node(int val)
@@ -41,7 +41,14 @@ void insert_at_end(node_t **head, int val)
     }
     temp->next = tmp;
 }
-
+void delete_linkedlist(node_t *head)
+{
+    node_t *temp = head;
+    while(temp->next != NULL)
+    {
+        
+    }
+}
 void insert_at(node_t **head, int index, int val)
 {
     node_t *temp = *head;
