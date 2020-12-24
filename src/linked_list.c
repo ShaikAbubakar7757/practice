@@ -31,6 +31,16 @@ void insert_at_begin(node_t **head, int val)
     tmp->next = *head;
     *head = tmp;
 }
+void insert_at_end(node_t **head, int val)
+{   
+    node_t *tmp = create_node(val);
+    node_t *temp = *head;
+    while(temp->next != NULL)
+    {
+       temp = temp->next;
+    }
+    temp->next = tmp;
+}
 int main() {
     printf("Hello, world!\n");
     node_t *head = NULL;
@@ -38,6 +48,9 @@ int main() {
     insert_at_begin(&head, 300);
     insert_at_begin(&head, 400);
     insert_at_begin(&head, 500);
+   
+    print_list(head);
+    insert_at_end(&head, 600);
     print_list(head);
     return 0;
 }
