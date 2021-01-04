@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include "my_header.h"
+/*Adding some comments*/
 int
 main (int argc, char *argv[])
 {
