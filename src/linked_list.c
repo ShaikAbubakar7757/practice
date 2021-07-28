@@ -11,6 +11,7 @@ void print_list(node_t *head)
         printf("%d -> ",temp->val);
         temp = temp->next;
     }
+    printf("%d -> ", temp->val);
     printf("NULL\n");
 }
 
@@ -40,10 +41,16 @@ void insert_at_end(node_t **head, int val)
 void delete_linkedlist(node_t *head)
 {
     node_t *temp = head;
+    node_t *prev = NULL;
     while(temp->next != NULL)
     {
-        
+	prev = temp;
+    	temp = temp->next;
+	printf("Freed %d \n",prev->val);
+    	free(prev);	
     }
+    printf("Freed %d \n", temp->val);
+    free(temp);
 }
 void insert_at(node_t **head, int index, int val)
 {
@@ -58,4 +65,47 @@ void insert_at(node_t **head, int index, int val)
     
 }
 
+void insert_after_node(node_t **before_node, int val)
+{
+	node_t *tmp = *before_node;
+	node_t *newnode = create_node(val);
+	newnode->next = tmp->next;
+	tmp->next = newnode;
+	return;
+}
+
+void find_node_by_val(node_t **node, int val)
+{
+	node_t *head = *node;
+	while(head->next != NULL)
+	{
+		if(head->val == val)
+		{
+			printf("The value %d is found !\n", val);
+		}
+		head = head->next;
+	}
+	return;
+}
+
+	
+	
+	
+
+void reverse_linked_list(node_t **head)
+{
+	
+	node_t *prev = NULL;
+	node_t *current = *head;
+	node_t *next = NULL;
+	while(current != NULL)
+	{
+		next = current->next;
+		current->next = prev;
+		prev = current;
+		current = next;
+	}
+	*head = prev;
+	return;
+}
   

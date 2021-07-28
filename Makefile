@@ -19,7 +19,7 @@ $(MAIN) :  $(OBJS) $(BINDIR)/$(MAIN).o
 
 $(BINDIR)/%.o:$(SRCDIR)/%.c
 	@echo "$(RED_CLR) Compiling dependencies...$(NO_CLR)"
-	$(CC) -I$(inc_dir)  $(CFLAGS)    -o $@ $<
+	$(CC) -I$(inc_dir)  $(CFLAGS)    $< -o  $@ 
 $(BINDIR)/$(MAIN).o : $(TSTDIR)/$(MAIN).c
 	@echo "$(RED_CLR) Compiling Test Case...$(NO_CLR)"
 	$(CC) -I$(inc_dir)  $(CFLAGS)    -o $@ $<

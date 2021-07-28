@@ -18,10 +18,13 @@ typedef struct node
     struct node *next;
 }node_t;
 
+void  insert_after_node(node_t**, int);
 
-
+void reverse_linked_list(node_t **head);
 
 node_t* create_node(int val);
+
+void find_node_by_val(node_t **node, int val);
 
 void insert_at_begin(node_t **head, int val);
 
